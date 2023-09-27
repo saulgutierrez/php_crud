@@ -714,6 +714,7 @@
     </div><!-- br-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
 
+    <!-- Llamada a Modal -->
     <?php require_once("modalmantenimiento.php");?>
 
     <script src="../../public/lib/jquery/jquery.js"></script>

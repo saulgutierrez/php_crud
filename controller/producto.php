@@ -26,6 +26,7 @@
             break;
 
         case "guardaryeditar":
+            // Como el parametro se recibira desde la vista, debemos capturar los datos con el metodo POST
             $datos=$producto->get_producto_x_id($_POST["prod_id"]);
             if(empty($_POST["prod_id"])){
                 if(is_array($datos)==true and count($datos)==0){
@@ -38,6 +39,7 @@
 
         case "mostrar":
             $datos=$producto->get_producto_x_id($_POST["prod_id"]);
+            // Si existen productos en el array, los mostramos
             if(is_array($datos)==true and count($datos)>0){
                 foreach($datos as $row){
                     $output["prod_id"] = $row["prod_id"];

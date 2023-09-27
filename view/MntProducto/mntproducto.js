@@ -58,10 +58,10 @@ $(document).ready(function(){ // Cuando se carga el documento
 });
 
 function guardaryeditar(e){
-    e.preventDefault();
+    e.preventDefault();  // Evitar que se guarde un registro dos veces
     var formData = new FormData($("#producto_form")[0]);
     $.ajax({
-        url: "../../controller/producto.php?op=guardaryeditar",
+        url: "../../controller/producto.php?op=guardaryeditar", // Guardado de datos
         type: "POST",
         data: formData,
         contentType: false,
@@ -74,7 +74,7 @@ function guardaryeditar(e){
 
             swal.fire(
                 'Registro!',
-                'El registro correctamente.',
+                'Se registro correctamente.',
                 'success'
             )
         }
@@ -85,6 +85,7 @@ function editar(prod_id){
     console.log(prod_id);
 }
 
+// Muestra modal de confirmacion de eliminacion de registo
 function eliminar(prod_id){
     swal.fire({
         title: 'CRUD',
@@ -96,7 +97,7 @@ function eliminar(prod_id){
         reverseButtons: true
     }).then((result) => {
         if (result.isConfirmed) {
-
+            // Enviamos el id a eliminar al controlador
             $.post("../../controller/producto.php?op=eliminar",{prod_id:prod_id},function (data) {
 
             });
@@ -112,6 +113,7 @@ function eliminar(prod_id){
     })
 }
 
+// Llamada a Modal Form
 $(document).on("click","#btnnuevo", function(){
     $('#mdltitulo').html('Nuevo Registro');
     $('#modalmantenimiento').modal('show');
