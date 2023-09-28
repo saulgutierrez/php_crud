@@ -1,6 +1,6 @@
 <!-- Este form aparece cuando se da click en agregar registro -->
 <div id="modalmantenimiento" class="modal fade bd-example-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <form method="post" id="producto_form">
                 <div class="modal-header">
@@ -20,8 +20,13 @@
                         <input type="text" class="form-control" id="prod_nom" name="prod_nom" placeholder="Ingrese Nombre" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="prod_nom">Descripcion</label>
+                        <label class="form-label" for="prod_desc">Descripcion</label>
                         <textarea rows="3" class="form-control" id="prod_desc" name="prod_desc" placeholder="Ingrese descripcion" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="prod_cant">Cantidad</label>
+                        <input type="number" class="form-control" id="prod_cant" name="prod_cant" placeholder="Ingrese Cantidad" required>
                     </div>
                 </div>
                 <div class="modal-footer">
