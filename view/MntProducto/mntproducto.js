@@ -7,6 +7,15 @@ function init(){
 }
 
 $(document).ready(function(){ // Cuando se carga el documento
+    $('#cat_id').select2({
+        // Indicar si el dropdown esta montado en un modal
+        dropdownParent: $("#modalmantenimiento")
+    });
+    // Retorna datos del archivo categoria.php
+    $.post("../../controller/categoria.php?op=combo",function (data) {
+        $('#cat_id').html(data); // Los datos vienen en un formulario html
+        console.log(data);
+    });
     tabla=$('#producto_data').dataTable({
 		"aProcessing": true,//Activamos el procesamiento del datatables
 	    "aServerSide": true,//Paginación y filtrado realizados por el servidor
@@ -82,7 +91,18 @@ function guardaryeditar(e){
 }
 
 function editar(prod_id){
-    console.log(prod_id);
+    // Editar titulo de modal
+    $('#mdltitulo').html('Editar registro');
+    // Traer la informacion desde el controlador en formato JSON
+    $.post("../../controller/producto.php?op=mostrar",{prod_id : prod_id}, function(data) {
+        data = JSON.parse(data);
+        // Asignar valores a los campos del modal
+        $('#prod_id').val(data.prod_id);
+        $('#cat_id').val(data.cat_id).trigger('change');
+        $('#prod_nom').val(data.prod_nom);
+        $('#prod_desc').val(data.prod_desc);
+    });
+    $('#modalmantenimiento').modal('show');
 }
 
 // Muestra modal de confirmacion de eliminacion de registo
@@ -116,6 +136,8 @@ function eliminar(prod_id){
 // Llamada a Modal Form
 $(document).on("click","#btnnuevo", function(){
     $('#mdltitulo').html('Nuevo Registro');
+    $('#producto_form')[0].reset();
+    $('#prod_id').val('');
     $('#modalmantenimiento').modal('show');
 });
 
