@@ -6,14 +6,14 @@
     <meta name="twitter:site" content="@themepixels">
     <meta name="twitter:creator" content="@themepixels">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bracket">
-    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="twitter:title" content="CRUD">
+    <meta name="twitter:description" content="Mantenimiento de Productos.">
     <meta name="twitter:image" content="http://themepixels.me/bracket/img/bracket-social.png">
 
     <!-- Facebook -->
     <meta property="og:url" content="http://themepixels.me/bracket">
-    <meta property="og:title" content="Bracket">
-    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta property="og:title" content="CRUD">
+    <meta property="og:description" content="Mantenimiento de Productos.">
 
     <meta property="og:image" content="http://themepixels.me/bracket/img/bracket-social.png">
     <meta property="og:image:secure_url" content="http://themepixels.me/bracket/img/bracket-social.png">
