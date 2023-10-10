@@ -20,4 +20,4 @@ Technologies used:
 <li>Font Awesome</li>
 <li>Ionic Icons</li>
 <li>DataTables</li>
-<li>Brackt Responsive Dashboard Template</li>
+<li>Bracket Responsive Dashboard Template</li>
