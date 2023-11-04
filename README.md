@@ -21,3 +21,5 @@ Technologies used:
 <li>Ionic Icons</li>
 <li>DataTables</li>
 <li>Bracket Responsive Dashboard Template</li>
+
+![image](https://github.com/saulgutierrez/php_crud/assets/62368834/bc4733ef-7b8a-4e5a-96e5-b9bd13b2aca3)
